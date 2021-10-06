@@ -11,7 +11,7 @@ export default function Section({ title, lfbtn, rgbtn, bgImage, desc }) {
       <Buttons>
         <ButtonGroup>
           <LeftButton>{lfbtn}</LeftButton>
-          <RightButton>{rgbtn}</RightButton>
+          {rgbtn && <RightButton>{rgbtn}</RightButton>}
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
@@ -61,7 +61,7 @@ const RightButton = styled(LeftButton)`
 `;
 
 const ItemText = styled.div`
-  padding-top: 15vh;
+  padding: 15vh 5vw 0;
   text-align: center;
 `;
 
